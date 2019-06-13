@@ -1,15 +1,17 @@
 import React from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import Hero from "../components/hero"
+import Logo from "../components/logo"
 
 import styled from 'styled-components';
 import theme from '../theme'
 import backgroundImage from '../images/yin_yang.jpg';
 
 const StyledIndexPage = styled.div`
-  padding: ${theme.padding.breathing_room} 0;
+  //The main component of each page must have flex-grow: 1
   flex-grow: 1;
+
+  padding: ${theme.padding.breathing_room} 0;
 
   display: flex;
   flex-direction: column;
@@ -23,7 +25,6 @@ const StyledIndexPage = styled.div`
   // background-attachment: fixed;
   background-size: auto 100%;
 `
-
 
 const CallToAction = styled.div`
   background: ${theme.primary.dark};
@@ -40,7 +41,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <StyledIndexPage>
-      <Hero />
+      <Logo />
       <CallToAction>Keep it clean, coco bean.</CallToAction>
     </StyledIndexPage>
   </Layout>

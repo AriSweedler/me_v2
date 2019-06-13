@@ -5,14 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 import styled from 'styled-components';
-import theme from '../theme'
+import theme from '../theme';
 
 import Header from "./header"
 import Footer from "./footer"
-import Menu  from "./menu"
+import Menu from "./Menu/menu"
 import "./layout.css"
 
 const StyledLayout = styled.div`
@@ -23,7 +23,7 @@ const StyledLayout = styled.div`
   background: ${theme.primary.light};
   padding: ${theme.padding.layout};
 
-  border: solid 5px ${theme.third}
+  border: ${theme.border.width} solid ${theme.third};
 `
 
 const Layout = ({ children }) => (

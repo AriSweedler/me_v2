@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from '../theme'
-
+import { Link } from "gatsby"
 import React from 'react'
 
 const Outside = styled.div`
@@ -8,14 +8,20 @@ const Outside = styled.div`
 `
 const Inside = styled.div`
   padding: ${theme.padding.breathing_room} ${theme.padding.breathing_room};
-  border: 5px solid ${theme.third}55;
+  border: ${theme.border.width} solid ${theme.third}55;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `
 
 const Header = () => (
   <Outside>
     <Inside>
-      <span style={{color: theme.white}}>ad</span>
-      <span style={{color: theme.secondary.normal}}>sweed</span>
+      <StyledLink to="/">
+        <span style={{color: theme.white}}>ad</span>
+        <span style={{color: theme.secondary.normal}}>sweed</span>
+      </StyledLink>
     </Inside>
   </Outside>
 )

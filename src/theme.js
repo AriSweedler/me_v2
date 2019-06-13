@@ -14,7 +14,12 @@ export default {
   padding: {
     breathing_room: '1.5rem',
   },
-  debug: {
-    border: 'border: 5px solid ',
+  HamburgerButton: {
+    width: 40,
+  },
+  border: {
+    width: '5px',
+    width2: '10px',
+    debug: 'border: 5px solid ',
   }
 }

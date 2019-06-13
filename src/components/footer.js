@@ -9,7 +9,7 @@ const Outside = styled.div`
   width: 100%;
   height: auto;
   background: ${theme.primary.dark}55;
-  border: 5px solid ${theme.third}88;
+  border: ${theme.border.width} solid ${theme.third}88;
 `
 const Inside = styled.div`
   padding: ${theme.padding.breathing_room} ${theme.padding.breathing_room};

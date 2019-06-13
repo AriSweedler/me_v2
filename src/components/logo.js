@@ -3,7 +3,7 @@ import React from "react"
 import styled from 'styled-components';
 import theme from '../theme'
 
-const StyledHero = styled.div`
+const StyledLogo = styled.div`
   font-size: 5rem;
 
   height: calc(${theme.padding.breathing_room} * 2)
@@ -16,11 +16,11 @@ const StyledHero = styled.div`
   margin: ${theme.padding.breathing_room} 0
 `
 
-const Hero = () => (
-  <StyledHero>
+const Logo = () => (
+  <StyledLogo>
     <span style={{color: theme.white}}>ad</span>
     <span style={{color: theme.secondary.normal}}>sweed</span>
-  </StyledHero>
+  </StyledLogo>
 )
 
-export default Hero
+export default Logo

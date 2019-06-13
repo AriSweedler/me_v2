@@ -16,6 +16,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"newComponent": {
+		"scope": "javascript",
 		"prefix": "react",
 		"body": [
 			"import styled from 'styled-components';",
