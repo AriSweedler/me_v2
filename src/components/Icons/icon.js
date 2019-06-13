@@ -9,8 +9,6 @@ const StyledIcon = styled.div`
   margin: 0 1.5rem;
   width: 3rem;
   height: 3rem;
-
-  ${theme.debug.border} white;
 `
 
 const Icon = () => (

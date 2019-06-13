@@ -32,7 +32,7 @@ const CallToAction = styled.div`
   border-radius: 1em;
 
   //The I'm using an alpha value of 50 here
-  border: solid 2px ${theme.secondary}50;
+  border: solid 2px ${theme.secondary.normal}50;
   color: ${theme.white}
 `
 

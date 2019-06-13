@@ -15,7 +15,7 @@ const Header = () => (
   <Outside>
     <Inside>
       <span style={{color: theme.white}}>ad</span>
-      <span style={{color: theme.secondary}}>sweed</span>
+      <span style={{color: theme.secondary.normal}}>sweed</span>
     </Inside>
   </Outside>
 )

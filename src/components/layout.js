@@ -12,17 +12,18 @@ import theme from '../theme'
 
 import Header from "./header"
 import Footer from "./footer"
+import Menu  from "./menu"
 import "./layout.css"
 
 const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 
   background: ${theme.primary.light};
   padding: ${theme.padding.layout};
 
-  ${theme.debug.border} purple
+  border: solid 5px ${theme.third}
 `
 
 const Layout = ({ children }) => (
@@ -39,6 +40,7 @@ const Layout = ({ children }) => (
     render={data => (
       <StyledLayout>
         <Header />
+        <Menu />
         {children}
         <Footer />
       </StyledLayout>

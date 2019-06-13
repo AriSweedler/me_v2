@@ -4,7 +4,11 @@ export default {
     normal: '#444444',
     dark: '#3d3d3d'
   },
-  secondary: '#eece1a',
+  secondary: {
+    light: '#f3db59',
+    normal: '#eece1a',
+    darl: '#8e7b0b'
+  },
   third: '#536895',
   white: '#dfdfdf',
   padding: {
