@@ -6,11 +6,24 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styled from 'styled-components';
+import theme from '../theme'
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+
+const StyledLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  background: ${theme.primary.light};
+  padding: ${theme.padding.layout};
+
+  ${theme.debug.border} purple
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,30 +37,13 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+      <StyledLayout>
+        <Header />
+        {children}
+        <Footer />
+      </StyledLayout>
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

@@ -1,23 +1,25 @@
+import React from 'react'
+
 import styled from 'styled-components';
 import theme from '../theme'
 
-import React from 'react'
+import IconArray from './Icons/iconArray'
 
 const Outside = styled.div`
-  background: ${theme.primary.normal};
+  width: 100%;
+  background: ${theme.primary.dark}55;
+  border: 5px solid ${theme.third}88;
 `
 const Inside = styled.div`
   padding: ${theme.padding.breathing_room} ${theme.padding.breathing_room};
-  border: 5px solid ${theme.third}55;
 `
 
-const Header = () => (
+const Footer = () => (
   <Outside>
     <Inside>
-      <span style={{color: theme.white}}>ad</span>
-      <span style={{color: theme.secondary}}>sweed</span>
+      <IconArray />
     </Inside>
   </Outside>
 )
 
-export default Header
+export default Footer

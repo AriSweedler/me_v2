@@ -1,20 +1,48 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
+import Hero from "../components/hero"
+
+import styled from 'styled-components';
+import theme from '../theme'
+import backgroundImage from '../images/yin_yang.jpg';
+
+const StyledIndexPage = styled.div`
+  padding: ${theme.padding.breathing_room} 0;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(127, 127, 127);
+  background-repeat: no-repeat;
+  background-image: url(${backgroundImage});
+  background-position: center;
+  // background-attachment: fixed;
+  background-size: auto 100%;
+`
+
+
+const CallToAction = styled.div`
+  background: ${theme.primary.dark};
+
+  padding: 0.4rem 1rem;
+  border-radius: 1em;
+
+  //The I'm using an alpha value of 50 here
+  border: solid 2px ${theme.secondary}50;
+  color: ${theme.white}
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <StyledIndexPage>
+      <Hero />
+      <CallToAction>Keep it clean, coco bean.</CallToAction>
+    </StyledIndexPage>
   </Layout>
 )
 
