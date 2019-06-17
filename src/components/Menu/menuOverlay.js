@@ -10,7 +10,7 @@ const StyledMenuOverlay = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  background: ${theme.primary.normal};
+  background: ${theme.primary.dark};
   opacity: ${props => (props.open)?"1":"0"};
 
   transition: all 0.7s ease;
@@ -21,8 +21,6 @@ const StyledMenuOverlay = styled.div`
     width: 50%;
     opacity: 0.9;
     transition: all 0.7s ease;
-
-    background: red;
     transform: translate(0, -100%);
 
     ${props => (props.open) ? `
@@ -34,13 +32,17 @@ const StyledMenuOverlay = styled.div`
 
 const rightStyle = {
   transform: 'translate(0, 100%)',
-  background: 'orange'
+  background: theme.primary.light
 }
 
 const MenuOverlay = (props) => (
   <StyledMenuOverlay open={props.open}>
-    <div open={props.open}><HeroMenu/></div>
-    <div style={rightStyle} open={props.open}><NavMenu/></div>
+    <div>
+      <HeroMenu/>
+    </div>
+    <div style={rightStyle}>
+      <NavMenu open={props.open}/>
+    </div>
   </StyledMenuOverlay>
 )
 

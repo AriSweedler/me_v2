@@ -23,7 +23,7 @@ const StyledLayout = styled.div`
   background: ${theme.primary.light};
   padding: ${theme.padding.layout};
 
-  border: ${theme.border.width} solid ${theme.third};
+  border: ${theme.border.width} solid ${theme.third.normal};
 `
 
 const Layout = ({ children }) => (

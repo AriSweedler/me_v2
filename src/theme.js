@@ -9,7 +9,12 @@ export default {
     normal: '#eece1a',
     darl: '#8e7b0b'
   },
-  third: '#536895',
+  third: {
+    double_light: '#009ACD',
+    light: '#7e85b7',
+    normal: '#536895',
+    dark: '#383e64'
+  },
   white: '#dfdfdf',
   padding: {
     breathing_room: '1.5rem',

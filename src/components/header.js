@@ -8,7 +8,7 @@ const Outside = styled.div`
 `
 const Inside = styled.div`
   padding: ${theme.padding.breathing_room} ${theme.padding.breathing_room};
-  border: ${theme.border.width} solid ${theme.third}55;
+  border: ${theme.border.width} solid ${theme.third.normal}55;
 `
 
 const StyledLink = styled(Link)`
