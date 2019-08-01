@@ -36,10 +36,10 @@ const StyledNavItem = styled(Link)`
   }
 `
 
+// How can I read what files are possible to link to? Is there a better place to store or collect this data?
 const pages = [
   {title: 'home', link: '/'},
-  {title: 'page 2', link: '/page-2'},
-  {title: 'page 3', link: '/page-3'}
+  {title: 'about', link: '/about'},
 ];
 
 const NavMenu = (props) => {
