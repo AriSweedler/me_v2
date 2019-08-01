@@ -5,6 +5,7 @@ import React from 'react'
 
 const Outside = styled.div`
   background: ${theme.primary.normal};
+  width: 100vw;
 `
 const Inside = styled.div`
   padding: ${theme.padding.breathing_room} ${theme.padding.breathing_room};
