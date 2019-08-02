@@ -5,11 +5,10 @@ import React from 'react'
 
 const Outside = styled.div`
   background: ${theme.primary.normal};
-  width: 100vw;
 `
 const Inside = styled.div`
   padding: ${theme.padding.breathing_room} ${theme.padding.breathing_room};
-  border: ${theme.border.width} solid ${theme.third.normal}55;
+  border: ${theme.border.width}px solid ${theme.third.normal}55;
 `
 
 const StyledLink = styled(Link)`

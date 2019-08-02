@@ -7,7 +7,7 @@ export default {
   secondary: {
     light: '#f3db59',
     normal: '#eece1a',
-    darl: '#8e7b0b'
+    dark: '#8e7b0b'
   },
   third: {
     double_light: '#009ACD',
@@ -16,15 +16,17 @@ export default {
     dark: '#383e64'
   },
   white: '#dfdfdf',
+  margin: {
+    hamburger_button: '0.2rem',
+  },
   padding: {
     breathing_room: '1.5rem',
   },
   HamburgerButton: {
-    width: 40,
+    width: 45,
   },
   border: {
-    width: '5px',
-    width2: '10px',
+    width: '5',
     debug: 'border: 5px solid ',
   }
 }

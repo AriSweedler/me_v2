@@ -4,7 +4,8 @@ import React from 'react';
 
 const slice = theme.HamburgerButton.width/12;
 
-const spin = `
+const CSS_to_open_Menu = `
+position: fixed;
 & > .line {
   &:nth-child(1) {
     transform: translate(${slice*1.5}px, ${slice*0.5}px) rotate(45deg);
@@ -22,8 +23,8 @@ const StyledHamburgerButton = styled.div`
   pointer-events: auto;
   position: absolute;
   z-index: 3;
-  right: ${theme.border.width2};
-  top: ${theme.border.width2};
+  right: ${theme.border.width * 2}px;
+  top: ${theme.border.width * 2}px;
   cursor: pointer;
 
   display: flex;
@@ -39,9 +40,10 @@ const StyledHamburgerButton = styled.div`
     transform-origin: 0 ${slice}px;
   }
 
-  ${props => (props.open)?(spin):("")}
+  // Add the CSS to spin the button if it's open, or don't add it
+  ${props => (props.open) && (CSS_to_open_Menu)}
 
-  background: ${theme.primary.normal}11;
+  margin: ${theme.margin.hamburger_button};
 `
 
 const HamburgerButton = (props) => (

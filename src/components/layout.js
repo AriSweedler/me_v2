@@ -18,20 +18,12 @@ import "./layout.css"
 const StyledLayout = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100vh;
 
   background: ${theme.primary.light};
   padding: ${theme.padding.layout};
 
-  border: ${theme.border.width} solid ${theme.third.normal};
-`
-
-const StyledChildren = styled.div`
-  padding: 5ch;
-  max-width: 80ch;
-
-  background: ${theme.white};
+  border: ${theme.border.width}px solid ${theme.third.normal};
 `
 
 const Layout = ({ children }) => (
@@ -49,7 +41,7 @@ const Layout = ({ children }) => (
       <StyledLayout>
         <Header />
         <Menu />
-        <StyledChildren>{children}</StyledChildren>
+        {children}
         <Footer />
       </StyledLayout>
     )}
