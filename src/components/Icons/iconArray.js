@@ -29,7 +29,7 @@ const IconArray = () => (
       <FaGithub />
     </StyledIcon>
 
-    <StyledIcon href="http://linkedin.com/arisweedler" target="_blank">
+    <StyledIcon href="https://www.linkedin.com/in/arisweedler/" target="_blank">
       <FaLinkedin />
     </StyledIcon>
 

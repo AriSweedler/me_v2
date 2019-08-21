@@ -47,8 +47,9 @@ const StyledNavItem = styled(Link)`
 // to store or collect this data?
 const pages = [
   {title: 'home', link: '/'},
-  {title: 'about', link: '/about'},
+  {title: 'about (WIP)', link: '/about'},
   {title: 'Hyuntae read this', link: '/ted'},
+  {title: 'post8', link: '/blog/post8'},
   {title: 'nowhere', link: 'Literally nowhere'},
 ];
 

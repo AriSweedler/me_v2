@@ -2,12 +2,13 @@ import React from "react"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Logo from "../components/logo"
+import { graphql } from 'gatsby'
 
 import styled from 'styled-components';
 import theme from '../theme'
-import backgroundImage from '../images/yin_yang.jpg';
+import BackgroundImage from 'gatsby-background-image'
 
-const StyledIndexPage = styled.div`
+const StyledIndexPage = styled(BackgroundImage)`
   //The main component of each page must have flex-grow: 1
   flex-grow: 1;
 
@@ -17,13 +18,8 @@ const StyledIndexPage = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  background-size: contain;
   background-color: rgb(127, 127, 127);
-  background-repeat: no-repeat;
-  background-image: url(${backgroundImage});
-  background-position: center;
-  // background-attachment: fixed;
-  background-size: auto 100%;
 `
 
 const CallToAction = styled.div`
@@ -37,10 +33,10 @@ const CallToAction = styled.div`
   color: ${theme.white}
 `
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <StyledIndexPage>
+    <StyledIndexPage fluid={data.file.childImageSharp.fluid} backgroundColor={'#000000'}>
       <Logo />
       <CallToAction>Keep it clean, coco bean.</CallToAction>
     </StyledIndexPage>
@@ -48,3 +44,17 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "yin_yang.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

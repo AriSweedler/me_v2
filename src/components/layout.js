@@ -1,18 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import React, { useState } from "react";
 import styled from 'styled-components';
 import theme from '../theme';
 
 import Header from "./header"
 import Footer from "./footer"
-import Menu from "./Menu/menu"
 import "./layout.css"
 
 const StyledLayout = styled.div`
@@ -26,26 +17,19 @@ const StyledLayout = styled.div`
   border: ${theme.border.width}px solid ${theme.third.normal};
 `
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <StyledLayout>
-        <Header />
-        <Menu />
-        {children}
-        <Footer />
-      </StyledLayout>
-    )}
-  />
-)
+const PageFiller = styled.div`
+  flex-grow: 1;
+`
+
+const Layout = ({ children }) => {
+  let [menuOpen, setMenu] = useState(false);
+  return (
+    <StyledLayout>
+      <Header setMenu={setMenu} />
+      {menuOpen ? <PageFiller /> : children}
+      <Footer />
+    </StyledLayout>
+  )
+}
 
 export default Layout
