@@ -1,17 +1,13 @@
-import React from "react"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Logo from "../components/logo"
-import { graphql } from 'gatsby'
-
+import React from 'react';
 import styled from 'styled-components';
 import theme from '../theme'
-import BackgroundImage from 'gatsby-background-image'
+import { graphql } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
+import Layout from '../components/Layout/Layout';
+import SEO from '../components/seo';
+import { StyledLogo } from "../components/Logo";
 
 const StyledIndexPage = styled(BackgroundImage)`
-  //The main component of each page must have flex-grow: 1
-  flex-grow: 1;
-
   padding: ${theme.padding.breathing_room} 0;
 
   display: flex;
@@ -37,7 +33,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <StyledIndexPage fluid={data.file.childImageSharp.fluid} backgroundColor={'#000000'}>
-      <Logo />
+      <StyledLogo />
       <CallToAction>Keep it clean, coco bean.</CallToAction>
     </StyledIndexPage>
   </Layout>

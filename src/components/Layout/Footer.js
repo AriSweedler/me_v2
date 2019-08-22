@@ -1,9 +1,9 @@
 import React from 'react'
 
 import styled from 'styled-components';
-import theme from '../theme'
+import theme from '../../theme'
 
-import IconArray from './Icons/iconArray'
+import IconArray from '../Icons/IconArray'
 
 const Outside = styled.div`
   width: 100%;

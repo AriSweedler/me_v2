@@ -1,7 +1,6 @@
-import React from "react"
-
+import React from 'react';
 import styled from 'styled-components';
-// import theme from '../theme'
+// import theme from '../theme';
 
 const StyledBio = styled.div`
   border: red 2px solid;

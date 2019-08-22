@@ -1,7 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 import theme from '../../theme';
-import { Link } from "gatsby"
-import React from 'react';
+import { Link } from 'gatsby';
 
 const StyledNavMenuDiv = styled.div`
   height: 100%;

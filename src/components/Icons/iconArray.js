@@ -1,8 +1,6 @@
 import React from 'react'
-
 import styled from 'styled-components';
 import theme from '../../theme'
-
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const StyledIcon = styled.a`

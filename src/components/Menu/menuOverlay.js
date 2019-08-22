@@ -1,9 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 import theme from '../../theme';
-import React from 'react';
-
-import HeroMenu from './heroMenu'
-import NavMenu from './navMenu'
+import HeroMenu from './HeroMenu'
+import NavMenu from './NavMenu'
 
 const StyledMenuOverlay = styled.div`
   position: fixed;
