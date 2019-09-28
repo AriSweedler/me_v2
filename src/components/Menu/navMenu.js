@@ -24,7 +24,7 @@ const StyledNavList = styled.nav`
 
 const StyledNavItem = styled(Link)`
   // Need to turn pointer-events back on
-  pointer-events: auto;
+  pointer-events: initial;
 
   color: ${theme.third.double_light};
   font-size: 1.5rem;
@@ -43,13 +43,12 @@ const StyledNavItem = styled(Link)`
   }
 `
 
-// How can I read what files are possible to link to? Is there a better place
-// to store or collect this data?
+// TODO How can I read what files are possible to link to? Is there a better place
+// TODO to store or collect this data?
 const pages = [
   {title: 'home', link: '/'},
-  {title: 'about (WIP)', link: '/about'},
-  {title: 'Hyuntae read this', link: '/ted'},
-  {title: 'post8', link: '/blog/post8'},
+  {title: 'about', link: '/about'},
+  {title: 'blog', link: '/blog'},
   {title: 'nowhere', link: 'Literally nowhere'},
 ];
 

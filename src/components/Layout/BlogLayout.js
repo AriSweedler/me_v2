@@ -25,4 +25,4 @@ const BlogLayout = ({ children }) => (
   </Layout>
 )
 
-export default BlogLayout
+export default BlogLayout;
