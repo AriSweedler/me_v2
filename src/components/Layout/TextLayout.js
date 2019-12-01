@@ -3,13 +3,19 @@ import styled from 'styled-components';
 import theme from '../../theme';
 import PageLayout from './PageLayout';
 
-//TODO ALSO do this stuff (unrelated to props.overrideWidth): https://css-tricks.com/overriding-the-default-text-selection-color-with-css/
 const StyledChildren = styled.div`
   background: ${theme.white};
   ${props => (props.overrideWidth) ? `width: ${props.overrideWidth}` : `max-width: 72ch` };
 
   padding: ${theme.padding.breathing_room};
   border: ${theme.border.width}px solid ${theme.primary.light}99;
+
+  p,li,h2,h3,h4,h5,h6 {
+    ::selection {
+      background-color: ${theme.third.light}80;
+      color: ${theme.secondary.dark};
+    }
+  }
 
   a {
     text-decoration-color: ${theme.third.normal};
