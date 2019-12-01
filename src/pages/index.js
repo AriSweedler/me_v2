@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../theme'
 import { graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
-import Layout from '../components/Layout/Layout';
+import PageLayout from '../components/Layout/PageLayout';
 import SEO from '../components/seo';
 import { StyledLogo } from "../components/Logo";
 
@@ -30,13 +30,13 @@ const CallToAction = styled.div`
 `
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <PageLayout>
     <SEO title="Home" />
     <StyledIndexPage fluid={data.file.childImageSharp.fluid} backgroundColor={'#000000'}>
       <StyledLogo />
       <CallToAction>Keep it clean, coco bean.</CallToAction>
     </StyledIndexPage>
-  </Layout>
+  </PageLayout>
 )
 
 export default IndexPage

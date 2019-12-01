@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../theme';
-import Layout from './Layout';
+import PageLayout from './PageLayout';
 
-//TODO do this stuff: https://css-tricks.com/overriding-the-default-text-selection-color-with-css/
+//TODO ALSO do this stuff (unrelated to props.overrideWidth): https://css-tricks.com/overriding-the-default-text-selection-color-with-css/
 const StyledChildren = styled.div`
   background: ${theme.white};
-  max-width: 72ch;
+  ${props => (props.overrideWidth) ? `width: ${props.overrideWidth}` : `max-width: 72ch` };
+
   padding: ${theme.padding.breathing_room};
   border: ${theme.border.width}px solid ${theme.primary.light}99;
 
@@ -25,12 +26,12 @@ const InnerBlogStyle = styled.div`
   justify-content: center;
 `
 
-const BlogLayout = ({ children }) => (
-  <Layout>
+const TextLayout = ({ overrideWidth, children }) => (
+  <PageLayout>
     <InnerBlogStyle>
-      <StyledChildren>{children}</StyledChildren>
+      <StyledChildren overrideWidth={overrideWidth}>{children}</StyledChildren>
     </InnerBlogStyle>
-  </Layout>
+  </PageLayout>
 )
 
-export default BlogLayout;
+export default TextLayout;

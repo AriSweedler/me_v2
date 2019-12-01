@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import theme from '../../theme';
 import Header from './Header';
 import Footer from './Footer';
-import './Layout.css';
+import './PageLayout.css';
 
-const StyledLayout = styled.div`
+const StyledPageLayout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -29,17 +29,19 @@ const StyledMiddle = styled.div`
   }
 `
 
-const Layout = ({ children }) => {
+// This component adds a header (including the menu) and a footer to the page, exposing a big central "StyledMiddle" element.
+// I normally style the content within the "StyledMiddle" with an additional layout, maybe a TextLayout or a TODO (What other layouts will I wanna use)
+const PageLayout = ({ children }) => {
   let [menuOpen, setMenu] = useState(false);
   return (
-    <StyledLayout>
+    <StyledPageLayout>
       <Header menuOpen={menuOpen} setMenu={setMenu} />
       <StyledMiddle menuOpen={menuOpen}>
         {children}
       </StyledMiddle>
       <Footer />
-    </StyledLayout>
+    </StyledPageLayout>
   )
 }
 
-export default Layout
+export default PageLayout
