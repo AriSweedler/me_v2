@@ -20,22 +20,26 @@ const StyledIconArray = styled.div`
   width: 100%;
 `
 
-const IconArray = () => (
-  <StyledIconArray>
+const socials = [
+  {link: "http://github.com/arisweedler/", icon: <FaGithub />},
+  {link: "https://www.linkedin.com/in/arisweedler/", icon: <FaLinkedin />},
+  {link: "https://twitter.com/Adsweed/", icon: <FaTwitter />},
+]
+const IconArray = () => {
 
-    <StyledIcon href="http://github.com/arisweedler/" target="_blank">
-      <FaGithub />
-    </StyledIcon>
-
-    <StyledIcon href="https://www.linkedin.com/in/arisweedler/" target="_blank">
-      <FaLinkedin />
-    </StyledIcon>
-
-    <StyledIcon href="https://twitter.com/Adsweed" target="_blank">
-      <FaTwitter />
-    </StyledIcon>
-
-  </StyledIconArray>
-)
+  const socialIcons = [];
+  for (let s of socials) {
+    socialIcons.push(
+      <StyledIcon href={s.link} target="_blank">
+        {s.icon}
+      </StyledIcon>
+    );
+  }
+  return (
+    <StyledIconArray>
+      {socialIcons}
+    </StyledIconArray>
+  )
+}
 
 export default IconArray

@@ -12,15 +12,16 @@ const StyledMenuOverlay = styled.div`
   height: 100%;
   background: ${theme.primary.dark};
   opacity: ${props => (props.open)?"1":"0"};
-
-  transition: all 0.7s ease;
+  ${props => (props.open)?"":"z-index: -1"};
+  transition: transform 0.7s ease, background 2s ease;
 
   display: flex;
 
   > * {
     width: 50%;
     opacity: 0.9;
-    transition: all 0.7s ease;
+    transition: transform 0.7s ease, background 2s ease;
+
     transform: translate(0, -100%);
 
     ${props => (props.open) ? `

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ari-sweedler-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Ari Sweedler's personal website",
+  "version": "0.2.0",
+  "author": "Ari Sweedler <ari@sweedler.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.1.4",
     "@mdx-js/react": "^1.1.4",
@@ -25,9 +25,6 @@
     "react-icons": "^3.7.0",
     "styled-components": "^4.3.1"
   },
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  },
   "keywords": [
     "gatsby"
   ],
@@ -35,16 +32,15 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/AriSweedler/me_v2"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/AriSweedler/me_v2/issues"
   }
 }
