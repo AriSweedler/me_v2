@@ -12,7 +12,7 @@ const Logo = () => (
     <span style={{color: theme.white}}>ad</span>
     <span style={{color: theme.secondary.normal}}>sweed</span>
   </StyledLink>
-)
+);
 
 const StyledLogoWrapper = styled.div`
   font-size: 5rem;
@@ -38,7 +38,7 @@ const StyledLogo = () => (
   <StyledLogoWrapper>
     <Logo />
   </StyledLogoWrapper>
-)
+);
 
 export default Logo;
 export { StyledLogo };

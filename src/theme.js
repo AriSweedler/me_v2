@@ -16,14 +16,12 @@ export default {
     dark: '#383e64'
   },
   white: '#dfdfdf',
-  margin: {
-    hamburger_button: '0.2rem',
-  },
   padding: {
     breathing_room: '1.5rem',
   },
-  HamburgerButton: {
+  hamburger_button: {
     width: 45,
+    margin: '0.2rem'
   },
   border: {
     width: '5',
