@@ -12,8 +12,14 @@ const StyledChildren = styled.div`
 
   p,li,h2,h3,h4,h5,h6 {
     ::selection {
-      background-color: ${theme.third.light}80;
-      color: ${theme.secondary.dark};
+      background-color: ${theme.color.matrix.background}F0;
+      color: ${theme.color.matrix.text}80;
+    }
+  }
+  a{
+    ::selection {
+      background-color: ${theme.color.matrix.background}C0;
+      color: ${theme.color.matrix.text};
     }
   }
 

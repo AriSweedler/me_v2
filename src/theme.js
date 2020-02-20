@@ -15,6 +15,12 @@ export default {
     normal: '#536895',
     dark: '#383e64'
   },
+  color: {
+    matrix: {
+      text: '#00FF41',
+      background: '#0D0208',
+    },
+  },
   white: '#dfdfdf',
   padding: {
     breathing_room: '1.5rem',

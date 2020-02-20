@@ -49,6 +49,7 @@ const pages = [
   {title: 'home', link: '/'},
   {title: 'about', link: '/about'},
   {title: 'blog', link: '/blog'},
+  {title: 'shorts', link: '/shorts'},
   {title: 'Maya\'s assigned readings', link: '/maya'},
   {title: 'nowhere', link: 'Literally nowhere'},
 ];
