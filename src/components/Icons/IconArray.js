@@ -28,9 +28,10 @@ const socials = [
 const IconArray = () => {
 
   const socialIcons = [];
+  let my_key = 0;
   for (let s of socials) {
     socialIcons.push(
-      <StyledIcon href={s.link} target="_blank">
+      <StyledIcon key={my_key++} href={s.link} target="_blank">
         {s.icon}
       </StyledIcon>
     );
