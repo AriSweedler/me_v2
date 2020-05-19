@@ -11,7 +11,9 @@ const StyledUnordredList = styled.div`
 `
 
 const posts = [
-  {title: 'Michael', link: '/michael'},
+  {title: 'White Tiles', link: '/michael'},
+  {title: 'The Brian Story', link: '/brian'},
+  {title: 'UCLA', link: '/ucla'},
 ];
 
 const ShortsPage = () => {
