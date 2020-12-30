@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import PageLayout from '../components/Layout/PageLayout';
 
@@ -23,7 +23,7 @@ const StyledAnchor = styled.a`
 `
 
 const StyledP = styled.p`
-  paddingL 3em;
+  padding: 3em;
   text-decoration: underline;
   cursor: crosshair;
 `
