@@ -1,0 +1,131 @@
+ADHD - weed to me is like adderol is to normal people Weed makes me think a lot.
+Whether it helps me think... well :) that's up for debate LOL
+
+But it sometimes helps me concentrate. I'm thinking so amazingly in the zone
+right now. I'm so concentrated and in flow. It feels amazing.
+
+Here's an example of me concentrating really hard and enjoying it. It's kinda a
+TLA+ example, as I'm trying to have the example be part of the proof of my
+point. My thoughts prove how weed affects me like Adderol does:
+
+Zac offering me adderol once. I think he did it because he was like "this makes
+me happy, I think it'll make you happy too and I wanna make you feel happy so
+you like me". Offering "the chance to get a prescription drug to be happy" is a
+bad thing. Offering the "choice to be happy" is a good thing.
+
+It was silly of zac to conflate the two, coulda been bad lol. I tried the drug
+for fun, which would only be ok if Zac thought it was safe ==> only ok if I
+thought it was safe. I did, of course, but damn.
+
+Anyway see THATS the concentration bullshit I'm talking about looool. I didn't
+need to think that but I just get so fixated on a branch of thought and I deeply
+fully explore it instead of my normal Breadth First approach to thinking about
+something.
+
+I gotta commit thoughts to reality and then repeat a BFS. In this regard my
+thoughts perform like A*, that is, BFS around an intelligently chosen heuristic.
+My heuristic is history.
+
+So as you can imagine this is quite inefficient when thinking about the future.
+Weed just made me see that, but it also forced me to concentrate on it in a way
+I don't get sucked into normal tasks.
+
+End example
+
+===
+
+Also I can't sleep on thinky Weed. Although that's arguably because I'm
+concentrating on electronics when I'm in this mood.
+
+Example: Also lol I just couldn't tell that I had to pee
+*
+but that's just a me problem in general.
+*
+
+Depending where I end the example (which * do I choose to insert the markdown)
+it is or isn't TLA+ correct. That is, true no matter what.
+
+Question: what is my ability to sleep due to weed related to? A) weed making me
+go on my computer B) weed being like adderol
+
+A implies I was up because I had to pee, but I couldn't tell I had to pee,
+because I was high.
+
+B implies I was up because I had to per, but I couldn't tell I had to Lee
+because I normally can't tell that.
+
+This is all wrong
+
+===
+
+I needed out on TLA+ this weekend
+
+Also making macros for my mouse
+
+I should post to Instagram about this cuz I wanna share about it to people but
+idk who to talk to. Maybe Ashwin, lol.
+
+you should think of property-based testing not as a testing process, but as a
+design process ... if a key aspect of your design is satisfied with just a
+simple implementation, then perhaps there is something you have overlooked
+â something that, when you discover it, will make your design both
+clearer and more robust.
+
+TDD works with specific examples, while PBT works with universal properties.
+
+examples are useful as a way into a design, and can be a form of documentation.
+But relying only on example-based tests would be a mistake. Properties scale
+with complexity so much better!
+
+And sometimes you need hyper properties - that is 1 and only 1 example is
+useless for a 2-property, but 2 and only 2 examples may be good enough to
+disprove.
+
+A hyper property is like "the average of this system is 10". You need infinite
+examples to ensure this is true. A 2-property is any 2 invocations with
+equal(ish) starting state yield the same result. This beats race conditions if
+states are exactly equal and can also be just a property of your system:
+(changing state[0] does not affect the answer)
+
+https://fsharpforfunandprofit.com/posts/property-based-testing-2/
+
+You also might be thinking that designing all these properties is a lot of work
+â and you'd be right! It is the hardest part.
+
+Ok but also... the hardest part of writing unit tests is writing GOOD unit
+tests. And good unit tests actually test all these properties anyway.
+
+So if you wanna actually test properly, you HAVE to test these properties
+ANYWAY!! So... why would you ever test them indirectly? :)
+
+"if a TDD fan tells you that they don't have the time to come up with
+property-based tests, then they might not be looking at the big picture."
+
+Actually... exactly this. A good TDD'er will be coming up with properties
+implicitly. Let's make them part of the code already!
+
+https://fsharpforfunandprofit.com/posts/roman-numeral-kata/
+
+This is OP. Even if I never formally use TLA+ in unit tests, I'll still write
+comments explaining the property-based intent of each test case
+
+I would strongly recommend that you write tests that map directly to the
+requirements. If the requirements are any good, this will mean that the tests
+cover many inputs at once, so you can then test as many inputs as you can.
+
+https://www.wired.com/2013/01/code-bugs-programming-why-we-need-specs/
+https://channel9.msdn.com/Events/Build/2014/3-642
+
+
+Epic. Understanding core of TLA+ allowed me to understand what Lamport was
+saying.
+
+The other big drawback is state-space explosion. Imagine you have three
+processes, each four sequential steps long, and can they can interleave the
+steps in any way. If they don't affect each other's behaviors, there are (4`*`3)!
+/ (4!)^3 = 34,650 total possible executions (behaviors). If each process has one
+of five initial states, you now have 4,300,000 total behaviors. And the model
+checker has to make sure all of them behave nicely. And this is assuming they
+don't interact with each other! If they do, the state space gets bigger even
+faster. The combinatorial explosion is seen as the primary challenge to model
+checking, and there's a lot of work put into making this more tractable.
